@@ -242,7 +242,7 @@ const styles = {
   noteItem: {
     padding: '15px',
     borderRadius: '12px',
-    border: '4px solid #F4E1B2', 
+    border: '4px solid rgb(245, 245, 245)', 
     boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
     transition: 'background-color 0.3s, box-shadow 0.3s',
     cursor: 'pointer',
