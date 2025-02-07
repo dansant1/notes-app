@@ -11,6 +11,7 @@ This project is a **full-stack note-taking application** built with **Next.js (R
 - [Database Models](#database-models)
 - [Frontend Page Descriptions](#frontend-page-descriptions)
 - [Performance Optimization](#performance-optimization)
+- [Use of ChatGPT](#use-of-chatgpt)
 
 ---
 
@@ -168,3 +169,10 @@ useEffect(() => {
   return () => clearTimeout(timer);
 }, [title, content, category]);
 ```
+
+---
+
+## Use of ChatGPT
+
+To improve the clarity and conciseness of the project documentation, **ChatGPT** was used to refine explanations and structure the content effectively. Additionally, ChatGPT was consulted to identify potential test cases that could enhance the robustness of the application. This helped ensure that edge cases and important scenarios were properly covered in the testing phase.
+
