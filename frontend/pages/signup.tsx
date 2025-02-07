@@ -45,7 +45,7 @@ const Signup: React.FC = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" style={styles.button} disabled={loading}>
-          {loading ? 'Registrando...' : 'Sign Up'}
+          {loading ? 'signing...' : 'Sign Up'}
         </button>
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </form>
