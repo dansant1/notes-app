@@ -18,11 +18,9 @@ const Signup: React.FC = () => {
 
     try {
       await register(email, password);
-      alert('Registro y login exitoso!');
-      
       router.push('/dashboard');
     } catch (error) {
-      setError('Hubo un error al registrar o iniciar sesión');
+      setError('An error ocurred in the signup step');
     } finally {
       setLoading(false);
     }
