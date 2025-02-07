@@ -4,7 +4,7 @@ from .models import Note, Category
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ["id", "name"]
+        fields = ["id", "name", "color"]
 
 class NoteSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())

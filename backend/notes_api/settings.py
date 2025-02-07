@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-gn4itx*_he$7$xe%6((ah^rsu%+$d+iu&ru40^i1$)=d8h0h3=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",  # Si tu frontend está en React, por ejemplo
+    "http://127.0.0.1:3000",
+]
 
 
 # Application definition
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     "users",
     "notes",
     'django_extensions',
+    'corsheaders'
 ]
 
 REST_FRAMEWORK = {
@@ -50,6 +56,7 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # 🔥 Debe ir aquí al inicio
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,3 +140,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "users.User"
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True 

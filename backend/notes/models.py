@@ -3,6 +3,7 @@ from users.models import User
 
 class Category(models.Model):
     name = models.CharField(max_length=255)
+    color = models.CharField(max_length=7, default='#FFFFFF')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="categories", null=True, blank=True)
 
     def __str__(self):
